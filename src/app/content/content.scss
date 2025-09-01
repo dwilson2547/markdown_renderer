@@ -2,14 +2,12 @@
   position: fixed;
   top: 56px;
   /* Height of the header */
-  width: 25%;
   left: 0;
   bottom: 0;
   background-color: #343a40;
   color: white;
   transition: transform 0.3s ease;
   z-index: 100;
-  overflow-y: scroll;
 }
 
 .sidebar.collapsed {
@@ -30,6 +28,13 @@
   padding: 0 15px;
 }
 
+.scrollable {
+  overflow-y: auto;
+  padding-top: 4px;
+  max-height: 100vh;
+  min-height: 20vh;
+}
+
 .toggle-btn {
   background: none;
   border: none;
@@ -48,8 +53,14 @@
   margin-left: 0px;
   transition: margin-left 0.3s ease;
   padding: 20px;
+  scroll-margin-top: 75px;
 }
 
 .content.expanded {
   margin-left: 25%;
+}
+
+.active_border.active {
+  border-top: #007bff solid 4px;
+  margin-top: -4px;
 }

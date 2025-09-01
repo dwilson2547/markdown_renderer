@@ -1,5 +1,11 @@
-<markdown
-  [src]="'/wiki/sidebar.md'"
-  (load)="onLoad($event)"
-  (error)="onError($event)"
-></markdown>
+<div class="sidebar" id="sidebar" [class.collapsed]="!sidebarVisible">
+  <div class="p-3">
+    <app-column-selector></app-column-selector>
+    <markdown
+      [src]="'/wiki/sidebar.md'"
+      (load)="onLoad($event)"
+      (error)="onError($event)"
+      (click)="onClick($event)"
+    ></markdown>
+  </div>
+</div>

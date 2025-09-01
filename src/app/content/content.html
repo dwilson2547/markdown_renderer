@@ -1,0 +1,25 @@
+<div class="content" id="content" [class.expanded]="sidebarVisible">
+  <div class="flex-container">
+    <div class="row">
+      @for(num of columnNumbers; track num) {
+      <div [class.col-md-12]="columnCount === 1" [class.col-md-6]="columnCount === 2" [class.col-md-4]="columnCount === 3" [class.col-md-3]="columnCount === 4" >
+        <div class="scrollable active_border" [class.active]="activeRenderer == num" (click)="activeRenderer = num">
+          @if(pages.get(num)) {
+          <markdown
+            [id]="'md-' + num"
+            [data]="pageData.get(num)"
+            [disableSanitizer]="true"
+            (load)="onLoad($event)"
+            (error)="onError($event)"
+            (click)="onClick($event)"
+          ></markdown>
+          } @else {
+          <p>Select a file from the sidebar to begin</p>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
+            <!-- [src]="pages.get(num)" -->

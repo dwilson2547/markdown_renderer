@@ -3,7 +3,7 @@
 ---
 
 - [**Containerization: A Comprehensive Guide**](#containerization-a-comprehensive-guide)
-  - [**1. What is Containerization?**](#1-what-is-containerization)
+  - [1. What is Containerization?](#1-what-is-containerization)
   - [**2. How Containerization Works**](#2-how-containerization-works)
     - [**2.1. Core Concepts**](#21-core-concepts)
     - [**2.2. Container Lifecycle**](#22-container-lifecycle)
@@ -60,7 +60,7 @@
   - [**17. Summary**](#17-summary)
 
 
-## **1. What is Containerization?**
+## 1. What is Containerization?
 **Containerization** is a lightweight **virtualization method** that packages an application and its dependencies into a **container**. Unlike traditional virtual machines (VMs), containers **share the host OS kernel** and run in **isolated user spaces**, making them **portable, efficient, and fast to deploy**.
 
 Containers provide:
